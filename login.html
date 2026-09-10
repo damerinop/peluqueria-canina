@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión - CanHappy</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>CanHappy Grooming</h1>
+        <nav><a href="index.html">Inicio</a></nav>
+    </header>
+
+    <main class="container">
+        <form onsubmit="return validarLogin(event)" style="max-width: 400px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px;">
+            <h3>Iniciar Sesión</h3>
+            <br>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" required style="width: 100%; padding: 8px; margin-top: 5px;"><br><br>
+
+            <label for="password">Contraseña:</label><br>
+            <input type="password" id="password" required style="width: 100%; padding: 8px; margin-top: 5px;"><br><br>
+
+            <button type="submit" style="width: 100%;">Ingresar</button>
+        </form>
+    </main>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>
