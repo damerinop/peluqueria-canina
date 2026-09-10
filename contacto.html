@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - CanHappy</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>CanHappy Grooming</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <form onsubmit="return validarContacto(event)" style="max-width: 500px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px;">
+            <h3>Contacto y Consultas</h3>
+            <br>
+            <label for="nombre">Nombre Completo:</label><br>
+            <input type="text" id="nombre" required style="width: 100%; padding: 8px; margin-top: 5px;"><br><br>
+
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" required style="width: 100%; padding: 8px; margin-top: 5px;"><br><br>
+
+            <label for="mensaje">Mensaje (máx. 500 caracteres):</label><br>
+            <textarea id="mensaje" maxlength="500" rows="5" required style="width: 100%; padding: 8px; margin-top: 5px;"></textarea><br><br>
+
+            <button type="submit" style="width: 100%;">Enviar Mensaje</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Peluquería Canina CanHappy</p>
+    </footer>
+
+    <script>
+        function validarContacto(e) {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            // Dominios permitidos
+            const dominios = ["@duoc.cl", "@profesor.duoc.cl", "@gmail.com"];
+            const dominioValido = dominios.some(domain => email.endsWith(domain));
+
+            if (!dominioValido) {
+                alert("El correo debe terminar en @duoc.cl, @profesor.duoc.cl o @gmail.com");
+                return false;
+            }
+
+            if (mensaje.length > 500) {
+                alert("El mensaje no puede superar los 500 caracteres.");
+                return false;
+            }
+
+            alert("¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.");
+            return true;
+        }
+    </script>
+</body>
+</html>
