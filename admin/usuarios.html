@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenedor de Usuarios - CanHappy</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Admin: Mantenedor de Usuarios</h1>
+        <nav>
+            <a href="index.html">Volver al Panel</a>
+            <a href="servicios.html">Gestión Servicios</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h3>Lista de Clientes / Usuarios Registrados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>RUN</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Región</th>
+                    <th>Comuna</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>19011022K</td>
+                    <td>Juan Pérez</td>
+                    <td>juan.perez@gmail.com</td>
+                    <td>Región Metropolitana</td>
+                    <td>Maipú</td>
+                    <td>
+                        <button type="button" style="background-color: #3498db;">Editar</button>
+                        <button type="button" style="background-color: #e74c3c;">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
